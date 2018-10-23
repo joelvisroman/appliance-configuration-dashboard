@@ -5,13 +5,8 @@
 This is a monorepo including two packages: configuration-dashboard-backend and configuration-dashboard-client.
 It uses lerna to manage packages.
 
-1. Install dependencies
-
-`$ npm i`
-
-1. Start the project
-
-`$ npm start`
+1. Install dependencies: `$ npm i`
+1. Start the project: `$ npm start`
 
 This last step will initialize every package on this repo for you.
 
