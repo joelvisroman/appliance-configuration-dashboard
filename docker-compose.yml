@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  backend:
+    build: ./configuration-dashboard-backend
+    ports:
+      - "3000:3000"
+  client:
+    build: ./configuration-dashboard-frontend
+    ports:
+      - "8080:8080"

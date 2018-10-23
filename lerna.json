@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "configuration-dashboard-frontend",
+    "configuration-dashboard-backend"
+  ],
+  "version": "0.0.0"
+}
