@@ -5,12 +5,13 @@
 This is a monorepo including two packages: configuration-dashboard-backend and configuration-dashboard-client.
 It uses lerna to manage packages.
 
-1. Install dependencies: `$ npm i`
-1. Start the project: `$ npm start`
+To bootstrap the project, just run: `npm i`.
 
-This last step will initialize every package on this repo for you.
+This will also bootstrap lerna for you.
 
-Whilde both projects are independt on its conception, you can use `docker-compose up` to build and serve both frontend and backend.
+While both projects are independt on its conception, you can use `npm start` to build and serve both frontend and backend.
+
+By default projects will autoreload on any file configuration change.
 
 ## Known Issues / Pending
 

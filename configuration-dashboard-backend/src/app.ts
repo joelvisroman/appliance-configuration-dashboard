@@ -1,12 +1,9 @@
 import express from "express";
 
+import { status } from "./routes";
+
 const app = express();
 
-// TODO: Remove, testing only
-app.get("/", (req, res) => {
-  res.send({
-    status: "ok"
-  });
-});
+app.use("/status", status);
 
 export default app;
