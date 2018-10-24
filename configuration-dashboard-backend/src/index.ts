@@ -1,13 +1,4 @@
-import express from "express";
-
-const app = express();
-
-// TODO: Remove, testing only
-app.get("/", (req, res) => {
-  res.send({
-    status: "ok"
-  });
-});
+import app from "./app";
 
 // TODO: parametrize port
 app.listen(3000, () => {

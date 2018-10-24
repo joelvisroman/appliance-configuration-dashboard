@@ -1,11 +1,14 @@
 version: "3"
-
 services:
   backend:
     build: ./configuration-dashboard-backend
+    volumes:
+      - ./configuration-dashboard-backend:/app
     ports:
       - "3000:3000"
   client:
     build: ./configuration-dashboard-frontend
+    volumes:
+      - ./configuration-dashboard-frontend:/app
     ports:
       - "8080:8080"

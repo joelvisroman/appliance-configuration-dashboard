@@ -9,14 +9,14 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    port: 8080
+    host: "0.0.0.0",
+    port: "8080"
   },
   module: {
     rules: [
       {
         test: /.(ts|tsx)$/,
-        use: "ts-loader",
-        exclude: ["/node_modules", "/**/*.test.tsx"]
+        use: "ts-loader"
       }
     ]
   },

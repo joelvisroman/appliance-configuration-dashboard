@@ -14,17 +14,22 @@
     ]
   },
   "scripts": {
-    "start": "lerna bootstrap"
+    "build-frontend": "docker build -t configuration-dashboard-frontend ./configuration-dashboard-frontend",
+    "build-backend": "docker build -t configuration-dashboard-backend ./configuration-dashboard-backend",
+    "pretest-frontend": "npm run build-frontend",
+    "pretest-backend": "npm run build-backend",
+    "test-frontend": "docker run configuration-dashboard-frontend npm test",
+    "test-backend": "docker run configuration-dashboard-backend npm test",
+    "test": "npm run test-frontend && npm run test-backend",
+    "start": "docker-compose up",
+    "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.7",
     "eslint": "^5.6.0",
     "husky": "^1.1.2",
-    "jest": "^23.6.0",
     "lerna": "^3.4.3",
     "lint-staged": "^7.3.0",
     "prettier": "1.14.3",
-    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.1"
