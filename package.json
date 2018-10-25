@@ -14,13 +14,13 @@
     ]
   },
   "scripts": {
-    "build-frontend": "docker build -t configuration-dashboard-frontend ./configuration-dashboard-frontend",
-    "build-backend": "docker build -t configuration-dashboard-backend ./configuration-dashboard-backend",
-    "pretest-frontend": "npm run build-frontend",
-    "pretest-backend": "npm run build-backend",
-    "test-frontend": "docker run configuration-dashboard-frontend npm test",
-    "test-backend": "docker run configuration-dashboard-backend npm test",
-    "test": "npm run test-frontend && npm run test-backend",
+    "build:frontend": "docker build -t configuration-dashboard-frontend ./configuration-dashboard-frontend",
+    "build:backend": "docker build -t configuration-dashboard-backend ./configuration-dashboard-backend",
+    "pretest:frontend": "npm run build:frontend",
+    "pretest:backend": "npm run build:backend",
+    "test:frontend": "docker run configuration-dashboard-frontend npm test",
+    "test:backend": "docker run configuration-dashboard-backend npm test",
+    "test": "npm run test:frontend && npm run test:backend",
     "start": "docker-compose up",
     "postinstall": "lerna bootstrap"
   },
