@@ -2,6 +2,11 @@ pipeline {
   agent {
     label 'crew-appliance'
   }
+
+  tools {
+    nodejs '8.11.3'
+  }
+
  
   environment {
     SERVICE_NAME = 'auth0-appliance-configuration-ui'
