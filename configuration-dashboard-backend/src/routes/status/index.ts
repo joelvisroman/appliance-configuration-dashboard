@@ -1,8 +1,12 @@
-import { Router } from "express";
-import statusController from "./controller";
+import { ServerRoute } from "hapi";
+import statusHandler from "../../handlers/status";
 
-const status = Router();
+const routes: [ServerRoute] = [
+  {
+    path: "/status",
+    method: "GET",
+    handler: statusHandler
+  }
+];
 
-status.get("/", statusController);
-
-export default status;
+export default routes;

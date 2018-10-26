@@ -1,10 +1,12 @@
-import request from "supertest";
-import app from "../app";
-import supertest = require("supertest");
+import server from "..";
 
-describe("The status route", () => {
-  it("should respond ok", async () => {
-    const response = await request(app).get("/status");
-    expect(response.status).toBe(200);
+describe("The status endpoint", () => {
+  it("Should GET the status", async () => {
+    const response = await server.inject({
+      method: "GET",
+      url: "/status"
+    });
+
+    expect(response.statusCode).toBe(200);
   });
 });

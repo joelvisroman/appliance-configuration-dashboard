@@ -66,7 +66,7 @@ pipeline {
   post {
     always { // Steps that need to run regardless of the job status, such as test results publishing, Slack notifications or dependencies cleanup
       // Publish test results
-      junit allowEmptyResults: true, testResults: '**/*junit.xml' // Requires 'JUnit' Jenkins plugin installed
+      junit allowEmptyResults: true, testResults: '**/*/junit.xml' // Requires 'JUnit' Jenkins plugin installed
  
       script {
         String additionalMessage = '';
